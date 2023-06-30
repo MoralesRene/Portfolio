@@ -47,11 +47,11 @@ function Skills() {
         },
     ]
     return (
-        <section id="Skills" className=" grid grid-cols-1 justify-items-center gap-y-[10px]">
-            <h1>Aptitudes</h1>
+        <section id="Skills" className=" grid grid-cols-1 justify-items-center gap-y-[10px] py-[45px]">
+            <h1 className="text-2xl font-nunito font-bold tracking-wider"><span className="text-cyan-700">Apti</span>tudes</h1>
         {
             skills.map((skill,index) => 
-                <div className="bg-[#f5f5f5] w-[80%] p-2 rounded-lg shadow-lg shadow-gray-300 relative z-[15] before:content-[''] hover:before:bg-[#d0d3d3] before:absolute before:top-0 before:left-0 before:w-0 hover:before:w-full before:h-full before:-z-10 before:duration-500">
+                <div className="flex flex-row justify-around bg-[#f5f5f5] w-[80%] p-2 rounded-lg shadow-lg shadow-gray-300 relative z-[15] before:content-[''] hover:before:bg-[#d0d3d3] before:absolute before:top-0 before:left-0 before:w-0 hover:before:w-full before:h-full before:-z-10 before:duration-500 before:rounded-lg">
                     <Cards 
                 key={index}
                 name={skill.name}
