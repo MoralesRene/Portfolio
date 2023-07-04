@@ -30,7 +30,8 @@ function CardProject() {
                 <VscChevronRight className={`opacity-0 duration-300  hover:opacity-100 w-[36px] h-[36px] text-black/70`} onClick={next}/>
             </div>
             <div className="w-[200px] h-full overflow-hidden relative duration-300 ease-linear">
-                <figure style={{transform:`translateX(-${position * 100}%)`}} className={`ease-linear flex flex-1 w-[calc(${arrayImg.length * 100}%)] h-full absolute left-0 top-0 duration-300`}>
+                <figure style={{transform:`translateX(-${position * 100}%)`}} className={`ease-linear flex flex-1 
+                w-[calc(${arrayImg.length * 100}%)] h-full absolute left-0 top-0 duration-300`}>
                 {
                     arrayImg.map((img,i)=>
                         <img key={i} src={`../../img/ProjectImages/${img}`} className="w-full h-full"/>
@@ -40,7 +41,10 @@ function CardProject() {
             </div>
             <div className="flex flex-col gap-y-[10px]  bg-cyan-700/40 text-white p-3 rounded-b-xl rounded-bl-xl">
                 <h1 className="text-center font-nunito text-2xl">Titulo Projecto</h1>
-                <p className="text-center font-nunito text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ex tenetur facere porro eius. Similique, tempora fugiat distinctio, sit nostrum corrupti dicta quo doloribus possimus sint laudantium nulla laboriosam expedita.</p>
+                <p className="text-center font-nunito text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Earum ex tenetur facere porro eius. Similique, tempora fugiat distinctio, 
+                    sit nostrum corrupti dicta quo doloribus possimus sint laudantium nulla laboriosam expedita.</p>
             </div>
         </figure>
     )
