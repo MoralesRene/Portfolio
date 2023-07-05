@@ -4,7 +4,7 @@ import React from "react";
 function Main() {
     return(
         <section id="Main" style={{backgroundImage: "linear-gradient(135deg,#1c3e49 60%,#06B6D4 60%)"}} 
-        className={`pt-[50px] pb-0 w-full h-screen xs:h-full xs:py-[65px] landscape:h-full landscape:pb-[30px] object-cover
+        className={`pt-[60px] pb-0 w-full h-screen xs:h-full xs:py-[65px] landscape:h-full landscape:pb-[30px] object-cover
          bg-[#1c3e49] object-center flex justify-center gap-y-[20px] flex-col items-center relative z-10 `}>
             <h1 className=" text-2xl text-white font-poppins font-bold">Bienvenido</h1>
             <div className="flex w-[90%] h-[300px]">

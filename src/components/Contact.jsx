@@ -1,8 +1,10 @@
+import {VscSend} from "react-icons/vsc"
 function Contact() {
     return (
-        <footer className="flex flex-col justify-center gap-y-[20px] items-center w-full  bg-cyan-500 pt-[20px] pb-[25px]">
-            <h1 id="Contact" className="text-white text-2xl font-nunito font-bold tracking-wide py-[5px]" ><span className="text-cyan-900 ">Contac</span>tame</h1>
-            <form action="" method="POST" className="rounded-xl px-2 py-[20px]  flex flex-col gap-y-[20px] justify-center  bg-cyan-800/70 w-[90%] text-white">
+        <footer id="Contact" className="flex flex-col justify-center gap-y-[20px] items-center w-full  bg-cyan-500 pt-[50px]  pb-[25px]">
+            <h1  className="text-white text-2xl font-poppins font-bold tracking-wide py-[5px]" ><span className="text-cyan-900 ">Contac</span>tame</h1>
+            <form action="" method="POST" className="rounded-xl px-2 py-[20px]  flex flex-col gap-y-[20px] justify-center 
+             bg-cyan-800/70 w-[90%] text-white md:w-[600px] lg:max-w-[800px]">
                 <label htmlFor="name" className="w-[80%] self-center text-xl capitalize">Nombre</label>
                 <input type="text" placeholder="Nombre"  id="name" 
                 className=" self-center indent-1 w-[80%] border-t-0 border-l-0 border-r-0 border-b-[3px] outline-none
@@ -23,6 +25,10 @@ function Contact() {
                 <textarea name="" id="message" cols="30" rows="5" placeholder="Escriba su mensaje" 
                 className="w-[80%] self-center border-t-[3px] border-l-[3px] border-r-[3px] border-b-[3px] outline-none text-white
                  border-cyan-500 bg-white placeholder:text-black/50 hover:placeholder:text-black"></textarea>
+                 <button type="submit" className="gap-x-[5px] items-center flex w-[80%] py-[8px] self-center justify-center bg-cyan-500 hover:bg-cyan-800 duration-200">
+                <span className="font-poppins text-base  font-bold tracking-widest">Enviar</span>
+                <VscSend />
+                 </button>
             </form>
         </footer>
     )

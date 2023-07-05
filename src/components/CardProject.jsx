@@ -1,12 +1,9 @@
 import { useState } from "react"
 import {VscChevronLeft,VscChevronRight} from "react-icons/vsc"
-function CardProject() {
-    const arrayImg=[
-        "Default.jpg",
-        "Default.jpg",
-        "Default.jpg",
-        "Default.jpg",
-    ] 
+import {AiOutlineGithub} from "react-icons/ai"
+import {GoVideo} from "react-icons/go"
+function CardProject({skills,description,title,array}) {
+     const arrayImg = array
     const [position,setPosition]= useState(0)
     const next = ()=>{
         if (position==arrayImg.length-1) {
@@ -24,28 +21,44 @@ function CardProject() {
     }
     
     return (
-        <figure className="flex flex-col w-[90%] h-[380px] justify-center items-center justify-self-center relative gap-y-[10px]">
-            <div className="absolute flex justify-center items-center w-full gap-x-[80%] top-[20%] translate-y-[20%] z-10 ">
+        <figure className="flex flex-col w-[90%] h-[500px] flex-wrap justify-center items-center justify-self-center relative">
+            <div className="absolute flex justify-center items-center w-full gap-x-[75%] top-[15%] translate-y-[15%] z-10 ">
                 <VscChevronLeft className={`opacity-0 duration-300  hover:opacity-100 w-[36px] h-[36px] text-black/70`} onClick={prev}/>
                 <VscChevronRight className={`opacity-0 duration-300  hover:opacity-100 w-[36px] h-[36px] text-black/70`} onClick={next}/>
             </div>
-            <div className="w-[200px] h-full overflow-hidden relative duration-300 ease-linear">
-                <figure style={{transform:`translateX(-${position * 100}%)`}} className={`ease-linear flex flex-1 
-                w-[calc(${arrayImg.length * 100}%)] h-full absolute left-0 top-0 duration-300`}>
+            <div className="w-[100%] h-[200px] overflow-hidden relative duration-300 ease-linear flex">
+                <figure style={{transform:`translateX(-${position * 100/arrayImg.length}%)`,width:`calc(${arrayImg.length * 100}%)`}} className={`ease-linear flex
+                 h-full absolute left-0 top-0 duration-300 rounded-xl gap-x-[5px]`}>
                 {
                     arrayImg.map((img,i)=>
-                        <img key={i} src={`../../img/ProjectImages/${img}`} className="w-full h-full"/>
+                        <img key={i} src={`../../img/ProjectImages/${img}`} className="w-full h-full rounded-xl "/>
                     )
                 }
                 </figure>
             </div>
-            <div className="flex flex-col gap-y-[10px]  bg-cyan-700/40 text-white p-3 rounded-b-xl rounded-bl-xl">
-                <h1 className="text-center font-nunito text-2xl">Titulo Projecto</h1>
+            <div className="flex flex-col gap-y-[10px] mt-[10px]  bg-cyan-700/40 text-white p-3 ">
+                <h1 className="text-center font-nunito text-2xl">{title}</h1>
                 <p className="text-center font-nunito text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Earum ex tenetur facere porro eius. Similique, tempora fugiat distinctio, 
-                    sit nostrum corrupti dicta quo doloribus possimus sint laudantium nulla laboriosam expedita.</p>
+                    {description}</p>
             </div>
+            <span className="bg-cyan-900/70 relative z-10 text-cyan-400  p-3 font-poppins text-sm">Tecnologias Utilizadas: <strong className="text-xs font-medium text-white">
+                {skills}
+                </strong>
+            </span>
+            <span className="flex w-full  h-[40px]">
+                <div className="flex p-1 gap-x-[5px] items-center justify-center bg-cyan-900 w-[50%] rounded-bl-xl relative">
+                    <a href="#" className="flex  items-center gap-x-[5px] p-1">
+                    <AiOutlineGithub size={30} className=" text-white"/>
+                    <span className="text-white text-xs font-nunito ">Repositorio</span>
+                    </a>
+                </div>
+                <div className="flex p-1 gap-x-[5px] justify-center items-center w-[50%] bg-white rounded-br-xl relative">
+                <a href="#" className="flex  items-center gap-x-[5px] p-1">
+                <GoVideo size={30}/>
+                <span className="text-xs font-nunito capitalize">Ver Demo</span>
+                </a>
+                </div>
+            </span>
         </figure>
     )
 }
