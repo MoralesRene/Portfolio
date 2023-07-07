@@ -2,7 +2,7 @@ import { useState } from "react"
 import {VscChevronLeft,VscChevronRight} from "react-icons/vsc"
 import {AiOutlineGithub} from "react-icons/ai"
 import {GoVideo} from "react-icons/go"
-function CardProject({skills,description,title,array}) {
+function CardProject({skills,description,title,array,link}) {
      const arrayImg = array
     const [position,setPosition]= useState(0)
     const next = ()=>{
@@ -22,10 +22,7 @@ function CardProject({skills,description,title,array}) {
     
     return (
         <figure className="flex flex-col w-[90%] h-[500px] flex-wrap justify-center items-center justify-self-center relative">
-            <div className="absolute flex justify-center items-center w-full gap-x-[75%] top-[15%] translate-y-[15%] z-10 ">
-                <VscChevronLeft className={`opacity-0 duration-300  hover:opacity-100 w-[36px] h-[36px] text-black/70`} onClick={prev}/>
-                <VscChevronRight className={`opacity-0 duration-300  hover:opacity-100 w-[36px] h-[36px] text-black/70`} onClick={next}/>
-            </div>
+            
             <div className="w-[100%] h-[200px] overflow-hidden relative duration-300 ease-linear flex">
                 <figure style={{transform:`translateX(-${position * 100/arrayImg.length}%)`,width:`calc(${arrayImg.length * 100}%)`}} className={`ease-linear flex
                  h-full absolute left-0 top-0 duration-300 rounded-xl gap-x-[5px]`}>
@@ -35,6 +32,10 @@ function CardProject({skills,description,title,array}) {
                     )
                 }
                 </figure>
+                <div className="absolute flex justify-center items-center w-full gap-x-[75%] top-[50%] translate-y-[-50%] z-10 ">
+                <VscChevronLeft className={`opacity-0 duration-300  hover:opacity-100 w-[36px] h-[36px] text-black/70`} onClick={prev}/>
+                <VscChevronRight className={`opacity-0 duration-300  hover:opacity-100 w-[36px] h-[36px] text-black/70`} onClick={next}/>
+            </div>
             </div>
             <div className="flex flex-col gap-y-[10px] mt-[10px]  bg-cyan-700/40 text-white p-3 ">
                 <h1 className="text-center font-nunito text-2xl">{title}</h1>
@@ -47,7 +48,7 @@ function CardProject({skills,description,title,array}) {
             </span>
             <span className="flex w-full  h-[40px]">
                 <div className="flex p-1 gap-x-[5px] items-center justify-center bg-cyan-900 w-[50%] rounded-bl-xl relative">
-                    <a href="#" className="flex  items-center gap-x-[5px] p-1">
+                    <a href={`${link}`} className="flex  items-center gap-x-[5px] p-1">
                     <AiOutlineGithub size={30} className=" text-white"/>
                     <span className="text-white text-xs font-nunito ">Repositorio</span>
                     </a>

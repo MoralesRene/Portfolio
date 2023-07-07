@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import {FaBars,FaRegEnvelope} from "react-icons/fa"
 import {BsPerson} from "react-icons/bs"
 import {AiOutlineHome,AiOutlineFolderOpen} from "react-icons/ai"
 import {GoStack} from "react-icons/go"
+import { Link } from "react-scroll"
 function Navbar() {
     const [nav, setNav] = useState(false)
     const handleNav = ()=>{
@@ -20,47 +21,89 @@ function Navbar() {
               bg-cyan-700/50 z-20 transition duration-300`}>
         
                <div className="flex w-full justify-center items-center relative h-[40px]">
-               <a href="#Main" onClick={handleNav} className={`duration-500 absolute top-0 ${nav? "left-[50%] translate-x-[-50%]" : "-left-full"}
+               <Link
+                activeClass="active"
+                to="Main"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={600} 
+                onClick={handleNav} className={`duration-500 absolute top-0 ${nav? "left-[50%] translate-x-[-50%]" : "-left-full"}
                 flex flex-row gap-x-3 rounded-full shadow-xl bg-cyan-500/90 hover:bg-cyan-700/90 p-[8px] justify-center items-center  w-[80%]
                  text-white `}>
                 <AiOutlineHome className=" text-xl/8"/><span>Inicio</span>
-                </a>
+                </Link>
                </div>
                <div className="flex w-full justify-center items-center relative h-[40px]">
-                <a  href="#AboutMe" onClick={handleNav} className={`duration-[600ms] absolute top-0 
+               <Link
+                activeClass="active"
+                to="AboutMe"
+                spy={true}
+                smooth={true}
+                offset={-20}
+                duration={600}  
+                onClick={handleNav} className={`duration-[600ms] absolute top-0 
                 ${nav? "left-[50%] translate-x-[-50%]" : "-left-full"} flex flex-row gap-x-3 rounded-full shadow-xl bg-cyan-500/90
                  hover:bg-cyan-700/90 p-[8px] justify-center items-center  w-[80%] text-white `}>
                 <BsPerson className=" text-xl/8"/><span>Sobre Mi</span>
-                </a>
+                </Link>
                 </div>
                 <div className="flex w-full justify-center items-center relative h-[40px]">
-                <a  href="#Skills" onClick={handleNav} className={`duration-700 absolute top-0 
+                <Link
+                activeClass="active"
+                to="Skills"
+                spy={true}
+                smooth={true}
+                offset={-20}
+                duration={600} 
+                 onClick={handleNav} className={`duration-700 absolute top-0 
                 ${nav? "left-[50%] translate-x-[-50%]" : "-left-full"} flex flex-row gap-x-3 rounded-full shadow-xl bg-cyan-500/90
                  hover:bg-cyan-700/90 p-[8px] justify-center items-center  w-[80%] text-white `}>
                 <GoStack className=" text-xl/8"/><span>Aptitudes</span>
-                </a>
+                </Link>
                 </div>
                 <div className="flex w-full justify-center items-center relative h-[40px]">
-                <a  href="#Projects" onClick={handleNav} className={`duration-[800ms] absolute top-0 
+                <Link
+                activeClass="active"
+                to="Projects"
+                spy={true}
+                smooth={true}
+                offset={-20}
+                duration={600} 
+                 onClick={handleNav} className={`duration-[800ms] absolute top-0 
                 ${nav? "left-[50%] translate-x-[-50%]" : "-left-full"} flex flex-row gap-x-3 rounded-full shadow-xl bg-cyan-500/90
                  hover:bg-cyan-700/90 p-[8px] justify-center items-center  w-[80%] text-white `}>
                 <AiOutlineFolderOpen className=" text-xl/8"/><span>Mis Proyectos</span>
-                </a>
+                </Link>
                 </div>
                 <div className="flex w-full justify-center items-center relative h-[40px]">
-                <a  href="#Contact" onClick={handleNav} className={`duration-[850ms] absolute top-0 
+                <Link
+                activeClass="active"
+                to="Contact"
+                spy={true}
+                smooth={true}
+                offset={-10}
+                duration={700} 
+                 onClick={handleNav} className={`duration-[850ms] absolute top-0 
                 ${nav? "left-[50%] translate-x-[-50%]" : "-left-full"} flex flex-row gap-x-3 rounded-full shadow-xl bg-cyan-500/90
                  hover:bg-cyan-700/90 p-[8px] justify-center items-center  w-[80%] text-white `}>
                 <FaRegEnvelope className=" text-xl/8"/><span>Contacto</span>
-                </a>
+                </Link>
                 </div>
            </div>
           </div>
           
       <div className=" md:block hidden relative z-[20]">
-      <div className={` fixed top-[35%] transform-y[-35%] ml-5 flex flex-col gap-y-2 duration-200 ${nav? "left-0" : "-left-[200px] md:delay-500 lg:delay-0"}`}>
+      <div className={` fixed top-[35%] transform-y[-35%] ml-5 flex flex-col gap-y-2 duration-[100ms] ${nav? "left-0" : "-left-[200px] md:delay-500 lg:delay-0"}`}>
        <div className="relative w-[60px] h-[60px] flex justify-center items-center justify-items-center">
-       <a href="#Main" onClick={handleNav} className={`ease-in-out ${nav? "translate-x-0 duration-[550ms]":"translate-x-[-200%] delay-500 lg:delay-0"}
+       <Link
+        activeClass="active"
+        to="Main"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={600} 
+        onClick={handleNav} className={`ease-in-out ${nav? "translate-x-0 duration-[550ms]":"translate-x-[-200%] delay-500 lg:delay-0"}
         bg-gray-100 p-[15px] rounded-full border-[1px] border-solid border-black/50 transition ease-in 300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
@@ -69,10 +112,16 @@ function Navbar() {
         before:uppercase before:text-xs before:hover:py-[5px] before:hover:ml-1 before:flex before:top-[50%] before:translate-y-[-50%] 
         before:left-full hover:before:opacity-100 before:opacity-0 before:content-['Inicio'] before:absolute`}>
       <AiOutlineHome size={30} />
-        </a>
+        </Link>
        </div>
        <div className="relative w-[60px] h-[60px] flex justify-center items-center justify-items-center">
-        <a href="#AboutMe" onClick={handleNav} className={` ease-in-out ${nav? "translate-x-0 duration-[650ms]":"translate-x-[-300%] delay-500 lg:delay-0"}
+       <Link
+        activeClass="active"
+        to="AboutMe"
+        spy={true}
+        smooth={true}
+        offset={-20}
+        duration={600}   onClick={handleNav} className={` ease-in-out ${nav? "translate-x-0 duration-[650ms]":"translate-x-[-300%] delay-500 lg:delay-0"}
          p-[15px] bg-gray-100 rounded-full border-[1px] border-solid border-black/50 transition ease-in 300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
@@ -81,10 +130,17 @@ function Navbar() {
         before:uppercase before:text-xs before:hover:py-[5px] before:hover:ml-1 before:flex before:top-[50%] before:translate-y-[-50%] 
         before:left-full hover:before:opacity-100 before:opacity-0 before:content-['Sobre_mi'] before:absolute`}>
       <BsPerson size={30} />
-        </a>
+        </Link>
         </div>
         <div className="relative w-[60px] h-[60px] flex justify-center items-center justify-items-center">
-        <a href="#Skills" onClick={handleNav} className={` ease-in-out ${nav? "translate-x-0 duration-[750ms]":"translate-x-[-400%] delay-500 lg:delay-0"}
+        <Link
+        activeClass="active"
+        to="Skills"
+        spy={true}
+        smooth={true}
+        offset={-20}
+        duration={600}  
+        onClick={handleNav} className={` ease-in-out ${nav? "translate-x-0 duration-[750ms]":"translate-x-[-400%] delay-500 lg:delay-0"}
          p-[15px] bg-gray-100 rounded-full border-[1px] border-solid border-black/50 transition ease-in 300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
@@ -93,10 +149,17 @@ function Navbar() {
         before:uppercase before:text-xs before:hover:py-[5px] before:hover:ml-1 before:flex before:top-[50%] before:translate-y-[-50%] 
         before:left-full hover:before:opacity-100 before:opacity-0 before:content-['Aptitudes'] before:absolute`}>
       <GoStack size={30} />
-        </a>
+        </Link>
         </div>
         <div className="relative w-[60px] h-[60px] flex justify-center items-center justify-items-center">
-        <a href="#Projects" onClick={handleNav} className={` ease-in-out ${nav? "translate-x-0 duration-[850ms]":"translate-x-[-500%] delay-500 lg:delay-0"}
+        <Link
+        activeClass="active"
+        to="Projects"
+        spy={true}
+        smooth={true}
+        offset={-20}
+        duration={600}  
+        onClick={handleNav} className={` ease-in-out ${nav? "translate-x-0 duration-[850ms]":"translate-x-[-500%] delay-500 lg:delay-0"}
          p-[15px] bg-gray-100 rounded-full border-[1px] border-solid border-black/50 transition ease-in 300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
@@ -105,10 +168,17 @@ function Navbar() {
         before:uppercase before:text-xs before:hover:py-[5px] before:hover:ml-1 before:flex before:top-[50%] before:translate-y-[-50%] 
         before:left-full hover:before:opacity-100 before:opacity-0 before:content-['Mis_Proyectos'] before:absolute`}>
       <AiOutlineFolderOpen size={30}/>
-        </a>
+        </Link>
         </div>
         <div className="relative w-[60px] h-[60px] flex justify-center items-center justify-items-center">
-        <a href="#Contact" onClick={handleNav} className={` ease-in-out ${nav? "translate-x-0 duration-[950ms]":"translate-x-[-600%] delay-500 lg:delay-0"}
+        <Link
+        activeClass="active"
+        to="Contact"
+        spy={true}
+        smooth={true}
+        offset={-20}
+        duration={600}  
+        onClick={handleNav} className={` ease-in-out ${nav? "translate-x-0 duration-[950ms]":"translate-x-[-600%] delay-500 lg:delay-0"}
          p-[15px] bg-gray-100 rounded-full border-[1px] border-solid border-black/50 transition ease-in 300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
@@ -117,7 +187,7 @@ function Navbar() {
         before:uppercase before:text-xs before:hover:py-[5px] before:hover:ml-1 before:flex before:top-[50%] before:translate-y-[-50%] 
         before:left-full hover:before:opacity-100 before:opacity-0 before:content-['Contactame']  before:absolute`}>
       <FaRegEnvelope size={30} />
-        </a>
+        </Link>
         </div>
       </div>
       </div>
