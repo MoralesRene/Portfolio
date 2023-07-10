@@ -21,7 +21,7 @@ function CardProject({skills,description,title,array,link}) {
     }
     
     return (
-        <figure className="flex flex-col w-[90%] h-[500px] flex-wrap justify-center items-center justify-self-center relative">
+        <figure className="flex flex-col w-[90%] h-[500px] flex-wrap justify-center md:max-w-[400px] items-center justify-self-center relative">
             
             <div className="w-[100%] h-[200px] overflow-hidden relative duration-300 ease-linear flex">
                 <figure style={{transform:`translateX(-${position * 100/arrayImg.length}%)`,width:`calc(${arrayImg.length * 100}%)`}} className={`ease-linear flex
@@ -47,14 +47,14 @@ function CardProject({skills,description,title,array,link}) {
                 </strong>
             </span>
             <span className="flex w-full  h-[40px]">
-                <div className="flex p-1 gap-x-[5px] items-center justify-center bg-cyan-900 w-[50%] rounded-bl-xl relative">
-                    <a href={`${link}`} className="flex  items-center gap-x-[5px] p-1">
+                <div className="flex p-1 gap-x-[5px] items-center justify-center bg-cyan-900 hover:bg-black/80 duration-200 w-[50%] rounded-bl-xl relative">
+                    <a href={`${link}`} target="_blank" className="flex  items-center gap-x-[5px] p-1">
                     <AiOutlineGithub size={30} className=" text-white"/>
                     <span className="text-white text-xs font-nunito ">Repositorio</span>
                     </a>
                 </div>
-                <div className="flex p-1 gap-x-[5px] justify-center items-center w-[50%] bg-white rounded-br-xl relative">
-                <a href="#" className="flex  items-center gap-x-[5px] p-1">
+                <div className="flex p-1 gap-x-[5px] justify-center items-center w-[50%] bg-white hover:bg-gray-200 duration-200 rounded-br-xl relative">
+                <a href="#" target="_blank" className="flex  items-center gap-x-[5px] p-1">
                 <GoVideo size={30}/>
                 <span className="text-xs font-nunito capitalize">Ver Demo</span>
                 </a>

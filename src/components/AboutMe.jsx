@@ -2,7 +2,8 @@ import React from "react";
 
 function AboutMe() {
     return (
-        <section id="AboutMe" className="bg-[#cdcdcd] flex flex-col items-center gap-y-[10px] py-[50px]">
+        <div className="flex justify-center bg-[#cdcdcd] ">
+            <section id="AboutMe" className="bg-[#cdcdcd] flex flex-col items-center gap-y-[10px] py-[50px] max-w-[1000px]">
             <h1  className=" text-white text-center text-2xl font-poppins font-bold"><span className=" text-cyan-600 capitalize">Sobre</span> Mi</h1>
             <div  className="flex flex-col items-center gap-y-[10px] md:flex-row gap-x-[20px] w-[90%] md:flex-wrap md:px-[20px] md:h-[300px]">
             <div className=" flex justify-center items-center w-[90%] h-[300px] rounded-full md:w-[45%]">
@@ -16,6 +17,7 @@ function AboutMe() {
             </div>
         </div>
         </section>
+        </div>
     )
 }
 export default AboutMe
