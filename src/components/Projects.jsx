@@ -1,32 +1,20 @@
 import CardProject from "./CardProject"
 function Projects() {
     return (
-        <section id="Projects" className=" grid grid-cols-1 justify-items-center gap-y-[10px] py-[60px] bg-gray-500/60">
-            <h1 className="text-2xl font-poppins font-bold tracking-wider"><span className="text-cyan-700">Mis </span>Proyectos</h1>
-            <div className="grid grid-cols-1 justify-center gap-y-[30px] sm:grid-cols-2 ">
+        <section id="Projects" style={{ backgroundImage: "linear-gradient(315deg,#1c3e49 93%,#06B6D4 93%)" }} className=" border-t border-cyan-500 border-solid grid grid-cols-1 justify-items-center gap-y-[10px] py-[60px]">
+            <h1 className="text-2xl font-poppins font-bold tracking-wider text-white"><span className="text-cyan-500">Mis </span>Proyectos</h1>
+            <div className="grid grid-cols-1 justify-center justify-items-center gap-y-[30px] ">
                 <CardProject
-                    skills={"HTML,CSS,Javascript, NodeJS, Sequelize, Express, MySQL"}
-                    title={"Titulo Proyecto"}
+                    skills={"Vite, React, Tailwind, HTML, CSS, Javascript"}
+                    title={"Portfolio Personal"}
                     array={[
-                        "Default.jpg",
-                        "Default.jpg",
-                        "Default.jpg",
-                        "Default.jpg",
+                        "portfolio-1.jpg",
+                        "portfolio-2.jpg",
+                        "portfolio-3.jpg",
+                        "portfolio-4.jpg",
                     ]}
-                    link={"https://github.com/MoralesRene"}
-                    description={"Lorem ipsum dolor sit amet consectetur adipisicing elit.Earum ex tenetur facere porro eius. Similique, tempora fugiat distinctio, sit nostrum corrupti dicta quo doloribus possimus sint laudantium nulla laboriosam expedita."}
-                />
-                <CardProject
-                    skills={"HTML,CSS,Javascript, NodeJS, Sequelize, Express, MySQL"}
-                    title={"Titulo Proyecto"}
-                    array={[
-                        "Default.jpg",
-                        "Default.jpg",
-                        "Default.jpg",
-                        "Default.jpg",
-                    ]}
-                    link={"https://github.com/MoralesRene"}
-                    description={"Lorem ipsum dolor sit amet consectetur adipisicing elit.Earum ex tenetur facere porro eius. Similique, tempora fugiat distinctio, sit nostrum corrupti dicta quo doloribus possimus sint laudantium nulla laboriosam expedita."}
+                    link={"https://github.com/MoralesRene/Portfolio"}
+                    description={"Portfolio personal creado a partir de Vite + React. Aprovechando este proyecto, pude aprender a utilizar Tailwind, un framework de CSS muy utilizado actualmente. Tambien para los iconos se utlizo la libreria 'React-icons' y 'React-scroll' para el desplazamiento suave entre secciones"}
                 />
             </div>
         </section>

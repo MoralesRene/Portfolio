@@ -1,6 +1,6 @@
 function Cards({name,url}) {
     return (
-        <figure className="flex  w-[90%] h-[150px] justify-evenly items-center">
+        <figure className="flex  w-[90%] h-[150px] md:h-[125px] justify-evenly items-center">
             <div className="w-[50%] h-full flex justify-center items-center">
             <img src={`${url}`} className=" p-[5px] h-auto  w-full"/>
             </div>

@@ -95,7 +95,7 @@ function Navbar() {
           </div>
           
       <div className=" md:block hidden relative z-[20] lg:hidden">
-      <div className={` fixed top-[35%] transform-y[-35%] ml-5 flex flex-col gap-y-2 duration-[400ms] ${nav? "left-0" : "-left-[200px] md:delay-500 lg:delay-0"}`}>
+      <div className={` fixed top-[50%] translate-y-[-50%]  landscape:top-[20%]  ml-5 flex flex-col gap-y-2 duration-[400ms] ${nav? "left-0" : "-left-[200px] md:delay-500 lg:delay-0"}`}>
        <div className="relative w-[60px] h-[60px] flex justify-center items-center justify-items-center">
        <Link
         activeClass="active"
