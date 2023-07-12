@@ -14,7 +14,7 @@ function Projects() {
                         "portfolio-4.jpg",
                     ]}
                     link={"https://github.com/MoralesRene/Portfolio"}
-                    description={"Portfolio personal creado a partir de Vite + React. Aprovechando este proyecto, pude aprender a utilizar Tailwind, un framework de CSS muy utilizado actualmente. Tambien para los iconos se utlizo la libreria 'React-icons' y 'React-scroll' para el desplazamiento suave entre secciones"}
+                    description={"Portfolio personal creado a partir de Vite + React. Aprovechando este proyecto, pude aprender a utilizar Tailwind, un framework de CSS muy utilizado actualmente. Tambien para los iconos se utlizo la libreria 'React-icons' y 'React-scroll' para el desplazamiento suave entre secciones."}
                 />
             </div>
         </section>

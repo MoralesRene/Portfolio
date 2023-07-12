@@ -17,7 +17,7 @@ function Navbar() {
         <span className="text-white text-xl font-poppins pl-[12px] w-full word-spacing">Rene Morales</span>
         <FaBars className={`text-3xl/8 fixed top-[14px] right-3 z-[99] text-white`} onClick={handleNav} /></div>
       
-      <div className={`absolute ${  nav ? "-left-0" : "-left-full" } duration-[500ms] md:hidden`}>
+      <div className={`absolute ${  nav ? "-left-0" : "-left-full" } duration-[500ms] sm:hidden md:landscape:hidden md:hidden`}>
              <div  className={`fixed landscape:pt-[50px] top-0 w-full h-screen flex flex-col items-center justify-center gap-y-3
               bg-cyan-700/50 z-20 transition duration-300`}>
         
@@ -94,8 +94,8 @@ function Navbar() {
            </div>
           </div>
           
-      <div className=" md:block hidden relative z-[20] lg:hidden">
-      <div className={` fixed top-[50%] translate-y-[-50%]  landscape:top-[20%]  ml-5 flex flex-col gap-y-2 duration-[400ms] ${nav? "left-0" : "-left-[200px] md:delay-500 lg:delay-0"}`}>
+      <div className="sm:block md:block hidden relative z-[20] lg:hidden">
+      <div className={` fixed top-[50%] translate-y-[-50%] xs:landscape:top-[60%] xs:landscape:translate-y-[-55%]  ml-5 flex flex-col gap-y-2 duration-[400ms] ${nav? "left-0" : "-left-[200px] md:delay-500 lg:delay-0"}`}>
        <div className="relative w-[60px] h-[60px] flex justify-center items-center justify-items-center">
        <Link
         activeClass="active"
@@ -105,7 +105,7 @@ function Navbar() {
         offset={-70}
         duration={600} 
         onClick={handleNav} className={`cursor-pointer ease-in-out 
-        bg-gray-100 p-[15px] rounded-full border-[1px] border-solid border-black/50 duration-300 relative z-[15] 
+        bg-gray-100 p-[15px] rounded-full border-[2px] border-solid border-cyan-500 duration-300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
         after:rounded-full  after:border-solid after:border-[2px] after:border-transparent after:hover:border-cyan-500
@@ -123,7 +123,7 @@ function Navbar() {
         smooth={true}
         offset={-20}
         duration={600}   onClick={handleNav} className={`cursor-pointer ease-in-out
-         p-[15px] bg-gray-100 rounded-full border-[1px] border-solid border-black/50 duration-300 relative z-[15] 
+         p-[15px] bg-gray-100 rounded-full border-[2px] border-solid border-cyan-500 duration-300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
         after:rounded-full  after:border-solid after:border-[2px] after:border-transparent after:hover:border-cyan-500
@@ -142,7 +142,7 @@ function Navbar() {
         offset={-20}
         duration={600}  
         onClick={handleNav} className={`cursor-pointer ease-in-out 
-         p-[15px] bg-gray-100 rounded-full border-[1px] border-solid border-black/50 duration-300 relative z-[15] 
+         p-[15px] bg-gray-100 rounded-full border-[2px] border-solid border-cyan-500 duration-300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
         after:rounded-full  after:border-solid after:border-[2px] after:border-transparent after:hover:border-cyan-500
@@ -161,7 +161,7 @@ function Navbar() {
         offset={-20}
         duration={600}  
         onClick={handleNav} className={`cursor-pointer ease-in-out 
-         p-[15px] bg-gray-100 rounded-full border-[1px] border-solid border-black/50 duration-300 relative z-[15] 
+         p-[15px] bg-gray-100 rounded-full border-[2px] border-solid border-cyan-500 duration-300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
         after:rounded-full  after:border-solid after:border-[2px] after:border-transparent after:hover:border-cyan-500
@@ -180,7 +180,7 @@ function Navbar() {
         offset={-20}
         duration={600}  
         onClick={handleNav} className={`cursor-pointer ease-in-out 
-         p-[15px] bg-gray-100 rounded-full border-[1px] border-solid border-black/50 duration-300 relative z-[15] 
+         p-[15px] bg-gray-100 rounded-full border-[2px] border-solid border-cyan-500 duration-300 relative z-[15] 
         after:absolute after:duration-300 after:w-[0px] after:hover:w-[54px] after:h-0 after:hover:h-[54px] after:z-20 
         after:bg-transparent after:flex after:left-[50%] after:top-[50%] after:translate-y-[-50%] after:translate-x-[-50%] 
         after:rounded-full  after:border-solid after:border-[2px] after:border-transparent after:hover:border-cyan-500

@@ -21,9 +21,9 @@ function CardProject({skills,description,title,array,link}) {
     }
     
     return (
-        <figure className="flex flex-col w-[90%] h-auto flex-wrap justify-center md:max-w-[400px] items-center justify-self-center relative">
+        <figure className="flex flex-col w-[80%] h-auto flex-wrap justify-center md:max-w-[400px] items-center justify-self-center relative">
             
-            <div className="w-[100%] h-[200px] border-solid border-cyan-500 border rounded-xl overflow-hidden relative duration-300 ease-linear flex">
+            <div className="w-[100%] h-[200px] border-solid border-cyan-500 border rounded-xl overflow-hidden relative z-[15] duration-300 ease-linear flex">
                 <figure style={{transform:`translateX(-${position * 100/arrayImg.length}%)`,width:`calc(${arrayImg.length * 100}%)`}} 
                 className={`ease-linear flex
                  h-full absolute left-0 top-0 duration-300 rounded-xl `}>
@@ -33,14 +33,18 @@ function CardProject({skills,description,title,array,link}) {
                     )
                 }
                 </figure>
-                <div className="absolute flex  justify-center items-center w-full gap-x-[75%] top-[50%] translate-y-[-50%] z-10 ">
-                <VscChevronLeft className={`opacity-0 duration-300 lg:opacity-100 hover:opacity-100 w-[36px] h-[36px] text-white/70`} onClick={prev}/>
-                <VscChevronRight className={`opacity-0 duration-300 lg:opacity-100 hover:opacity-100 w-[36px] h-[36px] text-white/70`} onClick={next}/>
             </div>
+            <div className="absolute flex h-[200px] justify-center items-center w-full gap-x-[95%] sm:gap-x-[100%] top-0  z-[10] ">
+                <div className="h-full flex justify-center items-center" onClick={prev}>
+                    <VscChevronLeft className={`duration-300  ${position==0 ? "opacity-0" :"opacity-100" } w-[36px] h-[100%] text-white/70`} onClick={prev}/>
+                    </div>
+                <div className="h-full flex justify-center items-center" onClick={next}>
+                    <VscChevronRight className={`duration-300  ${position==arrayImg.length-1 ? "opacity-0" :"opacity-100" }  w-[36px] h-[100%] text-white/70`} onClick={next}/>
+                    </div>
             </div>
             <div className="flex flex-col gap-y-[10px] mt-[10px]  bg-cyan-700/80 text-white p-3 ">
                 <h1 className="text-center font-nunito text-2xl">{title}</h1>
-                <p className="text-center font-nunito text-sm">
+                <p className="text-center font-nunito text-sm xl:text-base">
                     {description}</p>
             </div>
             <span className=" bg-cyan-950/80 relative z-10 text-cyan-400  p-3 font-poppins text-sm">Tecnologias Utilizadas: <strong className="text-xs font-medium text-white">

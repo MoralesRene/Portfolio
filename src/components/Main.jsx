@@ -3,10 +3,10 @@ import NetworkList from "./NetworkList";
 function Main() {
     return(
         <section id="Main" style={{backgroundImage: "linear-gradient(135deg,#1c3e49 60%,#06B6D4 60%)"}} 
-        className={`pt-[60px] pb-[5px] w-full h-screen  xs:py-[65px] sm:landscape:h-full lg:landscape:h-screen landscape:pb-[30px] object-cover
-         bg-[#1c3e49] object-center flex justify-center gap-y-[10px] flex-col items-center relative z-10 lg:h-screen`}>
-            <h1 className=" text-3xl text-white lg:text-3xl font-poppins font-bold">Bienvenido</h1>
-            <div className="flex w-[90%] h-[300px] md:h-[350px] lg:h-[400px] xl:h-[500px]">
+        className={`pt-[60px] pb-[5px] w-full h-screen  xs:py-[65px] sm:landscape:h-full  md:pt-[80px]  landscape:pb-[30px] 
+         bg-[#1c3e49] flex justify-center gap-y-[10px] flex-col items-center relative z-10 lg:h-screen`}>
+            <h1 className=" text-3xl text-white lg:text-[34px] font-poppins font-bold">Bienvenido</h1>
+            <div className="flex justify-center w-[90%] h-[300px] md:h-[350px] lg:h-[400px] xl:h-[500px]">
                 <img src="../../img/hand-coding.svg" alt="" />
             </div>
             <div className="flex justify-center items-center flex-col w-[80%] flex-wrap bg-cyan-900 p-2 gap-y-[20px] md:w-[50%] max-w-[400px] md:p-[20px] rounded-lg">
